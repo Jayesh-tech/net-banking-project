@@ -13,7 +13,7 @@ class User_Credentials():
         User_Credentials.name            = input("User Name : ")
         User_Credentials.root_password   = str(input("Password  : "))
         User_Credentials.login_          = True
-        user = open("C:\\Users\\Shweta\\Desktop\\UserCredentials\\" + User_Credentials.name, "w+") 
+        user = open("path of usercredentials" + User_Credentials.name, "w+") 
         user.write(User_Credentials.root_password + " " + str(User_Credentials.current_balance))
         main()
 
@@ -43,10 +43,10 @@ def login():
     os.system('cls')
     un = input("UserName > ")
 
-    if(os.path.exists("C:\\Users\\Shweta\\Desktop\\UserCredentials\\" + un)):
+    if(os.path.exists("path of user credentials" + un)):
         p  = input("Password > ")
 
-        UserFile = open("C:\\Users\\Shweta\\Desktop\\UserCredentials\\" + un, "r")
+        UserFile = open("path of user credentials" + un, "r")
         Content  = UserFile.read()
 
         password = Content.split()
